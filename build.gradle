@@ -1,0 +1,40 @@
+apply plugin: 'com.android.library'
+
+// 分别上传到本地仓库和远程仓库  （gradlew uploadArchives）
+// apply from : 'localRepositories.gradle'
+// apply from : 'remoteRepositories.gradle'
+
+android {
+    compileSdkVersion 26
+
+    defaultConfig {
+        minSdkVersion 10
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    compileOnly 'com.android.support:appcompat-v7:26.1.0'
+}
+
+// 在终端执行  gradlew makeJar  生成jar包
+//task makeJar(type: copy){
+//    delete 'build/libs/huyuLibrary.jar'
+//    from ('build/intermediates/bundles/release/')
+//    into ('build/libs/')
+//    include ('classes.jar')
+//    rename ('classes.jar', 'huyuLibrary.jar')
+//}
+//makeJar.dependsOn(build)

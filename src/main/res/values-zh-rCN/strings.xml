@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="ordinary">普通</string>
+    <string name="left_behind">留守</string>
+    <string name="intelligence">智能</string>
+    <string name="emergency">紧急</string>
+    <string name="guanbi">关闭</string>
+    <string name="doorbell">门铃</string>
+    <string name="usher">迎宾</string>
+    <string name="old_man">老人</string>
+
+    <string name="medical_care">医疗</string>
+    <string name="fire_alarm">火警</string>
+    <string name="robbery_alarm">劫警</string>
+    <string name="silent">无声</string>
+    <string name="thief_alarm">匪警</string>
+    <string name="perimeter">周界</string>
+    <string name="gas">燃气</string>
+
+    <string name="siren">警笛声</string>
+    <string name="bark">狗叫声</string>
+    <string name="satan_told1">魔鬼1</string>
+    <string name="satan_told2">魔鬼2</string>
+
+    <string name="language_chinese">中文</string>
+    <string name="language_english">英语</string>
+    <string name="language_russian">俄语</string>
+    <string name="language_spain">西班牙语</string>
+    <string name="language_french">法语</string>
+
+
+
+</resources>

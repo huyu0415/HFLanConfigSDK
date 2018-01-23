@@ -1,0 +1,24 @@
+apply plugin : 'maven'
+
+// 本地仓库
+uploadArchives {
+    repositories.mavenDeployer {
+        repository(url: "file://F://huyu_maven/local")      // 本地仓库路径
+        pom.groupId = "com.huyu.sdk"                        // 唯一标识
+        pom.artifactId = "HFLanConfigSDK"                   // 项目名称
+        pom.version = "18.01.23"                            // 版本
+    }
+}
+
+
+// 调用：
+// 1. 在项目build.gradle --> android
+//    repositories{
+//        maven {
+//            url "file://F://huyu_maven/local"
+//        }
+//    }
+// 2. 添加依赖
+//    dependencies {
+//      compile 'com.huyu.sdk:HFLanConfigSDK:18.01.23'
+//  }

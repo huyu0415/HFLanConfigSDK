@@ -1,0 +1,31 @@
+<resources>
+
+    <string name="ordinary">Ordinary</string>
+    <string name="left_behind">Stay</string>
+    <string name="intelligence">Intelligent</string>
+    <string name="emergency">Emergency</string>
+    <string name="guanbi">shut down</string>
+    <string name="doorbell">Doorbell</string>
+    <string name="usher">Welcome</string>
+    <string name="old_man">Old Man</string>
+
+    <string name="medical_care">Medical</string>
+    <string name="fire_alarm">Fire</string>
+    <string name="robbery_alarm">Robbery</string>
+    <string name="silent">Mute</string>
+    <string name="thief_alarm">Burglar</string>
+    <string name="perimeter">Perimeter</string>
+    <string name="gas">Gas</string>
+
+    <string name="siren">Siren</string>
+    <string name="bark">Dogs barking</string>
+    <string name="satan_told1">Devil Sound 1</string>
+    <string name="satan_told2">Devil Sound 2</string>
+
+    <string name="language_chinese">Chinese</string>
+    <string name="language_english">English</string>
+    <string name="language_russian">Russian</string>
+    <string name="language_spain">Spain</string>
+    <string name="language_french">French</string>
+
+</resources>

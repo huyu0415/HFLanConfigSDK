@@ -1,0 +1,49 @@
+apply plugin : 'maven'
+/**
+ * 使用Nexus工具搭建maven私服,并在AndroidStudio上引用
+ * https://www.jianshu.com/p/6a2872e11d26
+ * https://www.jianshu.com/p/a8aac4d95214
+ */
+
+
+// 生成 sources.jar
+task androidSourcesJar(type: Jar) {
+    classifier = 'sources'
+    from android.sourceSets.main.java.srcDirs
+}
+
+// 产生相关配置文件
+artifacts {
+    archives androidSourcesJar
+}
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository(url: "http://121.40.251.38:8081/nexus/content/repositories/library/") {
+                authentication(userName: "admin", password: "huyu1392010")
+            }
+            pom.project {
+                groupId 'com.huyu.sdk'           // 类似 包名结构
+                artifactId 'HFLanConfigSDK'      // 项目名
+                version '18.01.23'
+                name 'HF Chips Lan Config SDK'
+                description 'First upload library to maven server'
+                packaging 'aar'
+            }
+        }
+    }
+}
+
+
+// 调用：
+// 1. 在项目build.gradle --> android
+//    repositories{
+//        maven {
+//            url "http://121.40.251.38:8081/nexus/content/repositories/HuyuLibrary/"
+//        }
+//    }
+// 2. 添加依赖
+//    dependencies {
+//      compile 'com.huyu.sdk:HFLanConfigSDK:18.01.23' // groupId:artifactId:version
+//  }
